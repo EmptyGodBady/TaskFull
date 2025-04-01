@@ -11,7 +11,7 @@ export default function TButton({ children, className, onClick }: Props) {
   return (
     <button
       onClick={onClick}
-      className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ${
+      className={`bg-gradient-to-r from-indigo-500 to-blue-300 text-white px-4 py-2 rounded hover:cursor-pointer ${
         className || ""
       }`}
     >
