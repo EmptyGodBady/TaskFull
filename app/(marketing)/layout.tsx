@@ -47,7 +47,7 @@ export default function MarketingLayout({
 
     fetchImage();
   }, [accessKey]);
-
+  if (!bgImage) return null;
   return (
     <Stack
       className={`h-full ${bgImage ? `bg-cover bg-center` : ""}`}
