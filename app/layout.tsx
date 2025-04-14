@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
-import TrelloLogo from "./(marketing)/trello2-logo.png";
+import TrelloLogo from "@/components/trello2-logo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
