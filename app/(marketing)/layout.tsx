@@ -1,6 +1,6 @@
 "use client";
 import Flex from "@/components/flex";
-import TrelloLogo from "./trello2-logo.png";
+import TrelloLogo from "@/components/trello2-logo.png";
 import Image from "next/image";
 import Stack from "@/components/stack";
 import Text from "@/components/text";
@@ -53,7 +53,7 @@ export default function MarketingLayout({
       className={`h-full ${bgImage ? `bg-cover bg-center` : ""}`}
       style={{ backgroundImage: isLoaded ? `url(${bgImage})` : undefined }}
     >
-      <header className=" bg-neutral-100 flex justify-between py-1.5 px-3">
+      <header className=" bg-neutral-100 flex justify-between py-1.5 px-3 border-b">
         <Flex className="cursor-pointer items-center gap-2 ">
           <Image
             src={TrelloLogo.src}
