@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import Form from "./form";
-
+import Board from "./board";
 export default async function OrganizationIdPage() {
   const boards = await db.board.findMany();
 
@@ -9,7 +9,7 @@ export default async function OrganizationIdPage() {
       <Form />
       <div className="space-y-4">
         {boards.map((board) => (
-          <div key={board.id}>Board Title: {board.title}</div>
+          <Board key={board.id} title={board.title} id={board.id} />
         ))}
       </div>
     </div>
