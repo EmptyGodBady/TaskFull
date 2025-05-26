@@ -1,7 +1,6 @@
 "use client";
 
 import Flex from "@/components/flex";
-import TButton from "@/components/tButton";
 import { Accordion } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -11,6 +10,7 @@ import Link from "next/link";
 import { useLocalStorage } from "usehooks-ts";
 
 import NavItem, { Organization } from "./Nav-Item";
+import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
   storageKey?: string;
@@ -72,11 +72,11 @@ export default function Sidebar({
     <>
       <Flex className="font-medium test-xs items-center mb-1">
         <span className="pl-4">Workspaces</span>
-        <TButton className="ml-auto">
+        <Button className="ml-auto">
           <Link href="/select-org">
             <Plus className="h-4 w-4" />
           </Link>
-        </TButton>
+        </Button>
       </Flex>
       <Accordion
         type="multiple"

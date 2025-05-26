@@ -1,15 +1,16 @@
 import Flex from "@/components/flex";
 import Image from "next/image";
 import TrelloLogo from "@/components/trello2-logo.png";
-import TButton from "@/components/tButton";
 import { Plus } from "lucide-react";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import MobileSidebar from "./Mobile-Sidebar";
 import Text from "@/components/text";
+import FormPopover from "@/components/form/form-popover";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <Flex className="justify-between p-2 w-full border-b shadow-sm">
+    <Flex className="justify-between p-2 w-full border-b shadow-sm h-14">
       <Flex className="gap-x-4 ">
         <MobileSidebar />
         <Image
@@ -22,10 +23,14 @@ export default function Navbar() {
         <Text className="pt-1 font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl hidden md:block">
           Trello 2.0
         </Text>
-        <TButton className="hidden md:block">Create</TButton>
-        <TButton className="block md:hidden ml-0">
-          <Plus />
-        </TButton>
+        <FormPopover align="start" side="bottom" sideOffset={18}>
+          <Button className="hidden md:block">Create</Button>
+        </FormPopover>
+        <FormPopover align="start" side="bottom" sideOffset={18}>
+          <Button className="block md:hidden ml-0">
+            <Plus />
+          </Button>
+        </FormPopover>
       </Flex>
       <Flex className="gap-x-4">
         <OrganizationSwitcher

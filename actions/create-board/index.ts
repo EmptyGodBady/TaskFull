@@ -6,20 +6,42 @@ import { CreateBoard } from "./schema";
 import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { auth } from "@clerk/nextjs/server";
+
 const handler = async (data: InputType): Promise<ReturnType> => {
   const authResult = await auth();
-  const { userId } = authResult;
+  const { userId, orgId } = authResult;
 
-  if (!userId) {
+  if (!userId || !orgId) {
     return { error: "Unauthorized" };
   }
 
-  const { title } = data;
+  const { title, image } = data;
+
+  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] =
+    image.split("|");
+
+  if (
+    !imageId ||
+    !imageThumbUrl ||
+    !imageFullUrl ||
+    !imageLinkHTML ||
+    !imageUserName
+  ) {
+    return { error: "Missing fields. Failed to create board." };
+  }
 
   let board;
   try {
     board = await db.board.create({
-      data: { title },
+      data: {
+        title,
+        orgId,
+        imageId,
+        imageThumbUrl,
+        imageFullUrl,
+        imageLinkHTML,
+        imageUserName,
+      },
     });
   } catch (error) {
     console.error("Failed to create board:", error);
