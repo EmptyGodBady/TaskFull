@@ -7,19 +7,22 @@ import MobileSidebar from "./Mobile-Sidebar";
 import Text from "@/components/text";
 import FormPopover from "@/components/form/form-popover";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <Flex className="justify-between p-2 w-full border-b shadow-sm h-14">
       <Flex className="gap-x-4 ">
         <MobileSidebar />
-        <Image
-          className="hidden md:flex"
-          src={TrelloLogo.src}
-          alt="trello2-logo"
-          width={30}
-          height={60}
-        />
+        <Link href="/">
+          <Image
+            className="hidden md:flex"
+            src={TrelloLogo.src}
+            alt="trello2-logo"
+            width={30}
+            height={60}
+          />
+        </Link>
         <Text className="pt-1 font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl hidden md:block">
           Trello 2.0
         </Text>
