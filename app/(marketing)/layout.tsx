@@ -4,9 +4,9 @@ import TrelloLogo from "@/components/trello2-logo.png";
 import Image from "next/image";
 import Stack from "@/components/stack";
 import Text from "@/components/text";
-import TButton from "@/components/tButton";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function MarketingLayout({
   children,
@@ -66,7 +66,7 @@ export default function MarketingLayout({
           </Text>
         </Flex>
         <Link href="/sign-in">
-          <TButton className="pt-1 text-xl ">Log in</TButton>
+          <Button className="pt-1 text-xl ">Log in</Button>
         </Link>
       </header>
       <main className=" h-full flex justify-center items-center ">

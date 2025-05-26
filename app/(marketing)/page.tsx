@@ -1,8 +1,8 @@
 "use client";
 
 import Stack from "@/components/stack";
-import TButton from "@/components/tButton";
 import Text from "@/components/text";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function MarketingPage() {
@@ -23,7 +23,7 @@ export default function MarketingPage() {
         effortlessly.
       </Text>
       <Link href="/sign-in">
-        <TButton className="mt-8 mb-2">Get Started</TButton>
+        <Button className="mt-8 mb-2">Get Started</Button>
       </Link>
     </Stack>
   );
