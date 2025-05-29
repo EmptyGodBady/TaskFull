@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <Flex className="justify-between p-2 w-full border-b shadow-sm h-14">
+    <Flex className="justify-between  p-2 w-full border-b shadow-sm h-14">
       <Flex className="gap-x-4 ">
         <MobileSidebar />
         <Link href="/">
