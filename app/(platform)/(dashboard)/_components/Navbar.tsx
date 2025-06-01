@@ -23,9 +23,11 @@ export default function Navbar() {
             height={60}
           />
         </Link>
-        <Text className="pt-1 font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl hidden md:block">
-          Trello 2.0
-        </Text>
+        <Link href="/">
+          <Text className="pt-1 font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl hidden md:block">
+            Trello 2.0
+          </Text>
+        </Link>
         <FormPopover align="start" side="bottom" sideOffset={18}>
           <Button className="hidden md:block">Create</Button>
         </FormPopover>
