@@ -37,7 +37,7 @@ export default function CardModal() {
               )}
             </div>
           </div>
-          {!cardData ? <Actions.Skeleton/> : }
+          {!cardData ? <Actions.Skeleton/> : <Actions data={cardData}/>}
         </div>
       </DialogContent>
     </Dialog>
