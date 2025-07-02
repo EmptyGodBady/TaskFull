@@ -25,7 +25,7 @@ export default function Navbar() {
         </Link>
         <Link href="/">
           <Text className="pt-1 font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl hidden md:block">
-            Trello 2.0
+            TaskFull
           </Text>
         </Link>
         <FormPopover align="start" side="bottom" sideOffset={18}>

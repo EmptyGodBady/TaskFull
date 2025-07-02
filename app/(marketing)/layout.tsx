@@ -62,7 +62,7 @@ export default function MarketingLayout({
             height={60}
           />
           <Text className="font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-xl">
-            Trello 2.0
+            TaskFull
           </Text>
         </Flex>
         <Link href="/sign-in">
@@ -81,7 +81,7 @@ export default function MarketingLayout({
             height={40}
           />
           <Text className="font-bold bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text text-md">
-            Trello 2.0
+            TaskFull
           </Text>
         </Flex>
       </footer>

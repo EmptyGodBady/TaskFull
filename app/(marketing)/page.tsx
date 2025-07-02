@@ -11,14 +11,14 @@ export default function MarketingPage() {
       <Text className="font-bold text-[60px] z-10">
         Try{" "}
         <span className="bg-gradient-to-r from-indigo-500 to-blue-300 text-transparent bg-clip-text">
-          Trello 2.0
+          TaskFull
         </span>{" "}
         for <span className="text-green-500 ">free</span>
       </Text>
       <Text className="text-center mt-4 p-2">
-        Welcome to Trello 2.0, the ultimate project management tool designed to
+        Welcome to TaskFull, the ultimate project management tool designed to
         streamline your workflow and boost team collaboration. With an intuitive
-        interface, enhanced automation, and powerful integrations, Trello 2.0
+        interface, enhanced automation, and powerful integrations, TaskFull
         helps you stay organized, meet deadlines, and achieve your goals
         effortlessly.
       </Text>
